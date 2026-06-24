@@ -20,6 +20,19 @@ The homepage currently renders fictional sample candidate data for layout
 purposes. The real ingest pipeline (FEC, Voteview, OpenStates, etc.) is
 Phase 0/1 work per `PLAN.md`.
 
+## Database
+
+Postgres, hosted on Supabase. Schema lives in `db/schema.ts` (Drizzle ORM),
+modeled directly on `PLAN.md`'s data model. Copy `.env.example` to `.env` and
+fill in `DATABASE_URL` (the Supabase "Transaction pooler" connection string)
+to run migrations locally:
+
+```bash
+npm run db:generate   # write a new migration after a schema change
+npm run db:migrate    # apply pending migrations
+npm run db:studio     # browse the database
+```
+
 ## Deployment
 
 Deployed on Vercel, connected to this repo for auto-deploy on push to `main`.
