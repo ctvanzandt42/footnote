@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 
 /**
@@ -360,6 +361,9 @@ export default function Home() {
           <span>
             <b>3</b> Positions — self-reported, sourced
           </span>
+          <Link href="/methodology" className="vr-mast-link">
+            Read the full methodology →
+          </Link>
         </div>
       </header>
 
@@ -427,7 +431,11 @@ export default function Home() {
 
       <footer className="vr-foot">
         Sample data — fictional candidates for layout only. Production sources: FEC,
-        Congress.gov, Voteview, OpenStates, Vote Smart.
+        Congress.gov, Voteview, OpenStates, Vote Smart. See the{" "}
+        <Link href="/methodology" className="vr-mast-link">
+          full methodology
+        </Link>
+        .
       </footer>
     </div>
   );
