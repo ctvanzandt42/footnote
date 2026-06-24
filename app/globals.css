@@ -301,7 +301,7 @@ a {
   padding: 1px 7px;
 }
 
-/* Ideology axis (neutral track — deliberately not red/blue) */
+/* Ideology axis (neutral track, deliberately not red/blue) */
 .vr-axis {
   display: flex;
   align-items: center;
@@ -421,7 +421,7 @@ a {
   margin-right: 5px;
 }
 
-/* Source chip — the signature */
+/* Source chip: the signature */
 .vr-src {
   display: inline-flex;
   align-items: center;

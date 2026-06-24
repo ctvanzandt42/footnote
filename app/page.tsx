@@ -4,15 +4,15 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 
 /**
- * Footnote (footnote.vote) — homepage
+ * Footnote (footnote.vote) homepage
  *
  * Demonstrates the layout and the core product doctrine in real components:
  *   - Tier 1: party affiliation (a fact; tiny color dot, never the page identity)
- *   - Tier 2: academic ideology score (cited — DW-NOMINATE / Voteview), on a
+ *   - Tier 2: academic ideology score (cited: DW-NOMINATE / Voteview), on a
  *             NEUTRAL spectrum track (no red/blue gradient = no editorializing)
  *   - Tier 3: self-reported positions (quotes, each with its own source chip)
  *   - Honesty flag: candidates with no legislative record get a dignified
- *             "no cited score" panel — the gap is shown, never guessed at.
+ *             "no cited score" panel; the gap is shown, never guessed at.
  *
  * Signature element: the monospace SOURCE CHIP. Provenance is visible on every
  * data point. That is the thing this UI is remembered by.
@@ -63,9 +63,9 @@ const CANDIDATES: Candidate[] = [
     state: "OH",
     district: null,
     incumbent: true,
-    // Tier 2 — cited academic score. null === no legislative record.
+    // Tier 2: cited academic score. null === no legislative record.
     score: { system: "DW-NOMINATE", value: -0.34, source: "Voteview", vintage: "119th Cong." },
-    // Tier 3 — self-reported positions, each independently sourced.
+    // Tier 3: self-reported positions, each independently sourced.
     positions: [
       { topic: "Broadband", quote: "Expand rural broadband through federal matching grants.", source: "Campaign site", self: true },
       { topic: "Infrastructure", quote: "Voted to reauthorize the state infrastructure bank.", source: "Voteview · roll-call", self: false },
@@ -95,7 +95,7 @@ const CANDIDATES: Candidate[] = [
     state: "OH",
     district: "7",
     incumbent: false,
-    score: null, // challenger — no voting record → honesty flag
+    score: null, // challenger, no voting record: triggers honesty flag
     positions: [
       { topic: "Elections", quote: "Pilot ranked-choice voting in statewide primaries.", source: "Campaign site", self: true },
       { topic: "Access", quote: "Fund a year-round constituent town-hall program.", source: "Candidate questionnaire", self: true },
@@ -110,7 +110,7 @@ const CANDIDATES: Candidate[] = [
     state: "OH",
     district: null,
     incumbent: false,
-    score: null, // state executive race — no congressional DW-NOMINATE
+    score: null, // state executive race, no congressional DW-NOMINATE
     positions: [
       { topic: "Taxes", quote: "Property-tax rebate for first-time homeowners.", source: "Campaign site", self: true },
       { topic: "Redistricting", quote: "Establish an independent redistricting commission.", source: "Vote Smart · PCT", self: true },
@@ -141,7 +141,7 @@ const BUCKET_LABEL: Record<Bucket, string> = {
 };
 
 // ---------------------------------------------------------------------------
-// Tiny inline icon (kept self-contained — no icon dependency)
+// Tiny inline icon (kept self-contained, no icon dependency)
 // ---------------------------------------------------------------------------
 function SourceMark() {
   // a small "verified source" seal
@@ -154,7 +154,7 @@ function SourceMark() {
 }
 
 // ---------------------------------------------------------------------------
-// Source chip — the signature element
+// Source chip: the signature element
 // ---------------------------------------------------------------------------
 function Source({ children }: { children: React.ReactNode }) {
   return (
@@ -166,14 +166,14 @@ function Source({ children }: { children: React.ReactNode }) {
 }
 
 // ---------------------------------------------------------------------------
-// Tier 2 — ideology spectrum (neutral track) OR honesty flag
+// Tier 2: ideology spectrum (neutral track) OR honesty flag
 // ---------------------------------------------------------------------------
 function IdeologyTier({ candidate }: { candidate: Candidate }) {
   const s = candidate.score;
   if (!s) {
     const why =
       candidate.office === "Governor"
-        ? "No congressional voting record — state executive office."
+        ? "No congressional voting record (state executive office)."
         : "No legislative record yet.";
     return (
       <div className="vr-tier">
@@ -353,13 +353,13 @@ export default function Home() {
         </p>
         <div className="vr-tierkey">
           <span>
-            <b>1</b> Party — a filed fact
+            <b>1</b> Party: a filed fact
           </span>
           <span>
-            <b>2</b> Ideology — cited academic score
+            <b>2</b> Ideology: cited academic score
           </span>
           <span>
-            <b>3</b> Positions — self-reported, sourced
+            <b>3</b> Positions: self-reported, sourced
           </span>
           <Link href="/methodology" className="vr-mast-link">
             Read the full methodology →
@@ -430,7 +430,7 @@ export default function Home() {
       </main>
 
       <footer className="vr-foot">
-        Sample data — fictional candidates for layout only. Production sources: FEC,
+        Sample data: fictional candidates for layout only. Production sources: FEC,
         Congress.gov, Voteview, OpenStates, Vote Smart. See the{" "}
         <Link href="/methodology" className="vr-mast-link">
           full methodology

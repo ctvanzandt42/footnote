@@ -17,7 +17,7 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000).
 
 The homepage currently renders fictional sample candidate data for layout
-purposes — the real ingest pipeline (FEC, Voteview, OpenStates, etc.) is
+purposes. The real ingest pipeline (FEC, Voteview, OpenStates, etc.) is
 Phase 0/1 work per `PLAN.md`.
 
 ## Deployment

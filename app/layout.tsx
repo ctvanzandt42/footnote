@@ -21,7 +21,7 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Footnote — every claim, footnoted",
+  title: "Footnote: every claim, footnoted",
   description:
     "A nonpartisan, source-cited guide to candidates in U.S. federal and state races. We cite a candidate's leaning. We never assign one.",
 };
