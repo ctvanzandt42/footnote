@@ -28,7 +28,7 @@ export default function Methodology() {
       </div>
 
       <div className="vr-doc-callout vr-doc-callout--todo">
-        <strong>Status:</strong> Footnote hasn&rsquo;t ingested real candidate data yet. What you
+        <strong>Status:</strong>{" "}Footnote hasn&rsquo;t ingested real candidate data yet. What you
         see elsewhere on the site today is fictional sample data, built to test layout. This page
         describes the rules that will govern real candidate data the moment it ships, published
         ahead of time so the policy is public before any candidate appears.
@@ -53,7 +53,7 @@ export default function Methodology() {
           </li>
         </ul>
         <p className="vr-doc-p" style={{ marginBottom: 0 }}>
-          <strong>A note on AI.</strong> AI tools were used in building this site, including
+          <strong>A note on AI.</strong>{" "}AI tools were used in building this site, including
           writing code and this page. They are not used to generate, summarize, score, or
           otherwise determine anything about a candidate. Every candidate-facing fact, score, and
           quote comes only from the disclosed sources above, through the disclosed methods, never
@@ -88,7 +88,7 @@ export default function Methodology() {
           <p className="vr-doc-p" style={{ marginBottom: 0 }}>
             Candidates with no legislative record (challengers, most state-executive candidates)
             don&rsquo;t get a score. We never fill that gap with a guess. Instead they get a
-            visible <strong>&ldquo;No legislative record yet&rdquo;</strong> marker, and the
+            visible <strong>&ldquo;No legislative record yet&rdquo;</strong>{" "}marker, and the
             ideology filter simply doesn&rsquo;t apply to them. The gap is information for the
             voter, not something to paper over.
           </p>
@@ -109,7 +109,7 @@ export default function Methodology() {
         <h2 className="vr-doc-h2">How the leaning buckets are calculated</h2>
         <p className="vr-doc-p">
           Filters like &ldquo;lean liberal,&rdquo; &ldquo;center,&rdquo; and &ldquo;lean
-          conservative&rdquo; are <em>derived</em> from the Tier 2 score at query time; we never
+          conservative&rdquo; are <em>derived</em>{" "}from the Tier 2 score at query time; we never
           store a hand-assigned bucket. For federal candidates, the current (v1) method is a fixed
           cutoff on the DW-NOMINATE scale, which runs from −1 (most liberal) to +1 (most
           conservative):
@@ -133,14 +133,14 @@ export default function Methodology() {
         <h2 className="vr-doc-h2">Positions and factual claims</h2>
         <p className="vr-doc-p">
           A self-reported position often fuses two different kinds of statement: a{" "}
-          <strong>stance</strong> (a value or policy preference; no truth value, we never
-          adjudicate it) and an <strong>empirical claim</strong> (a checkable factual assertion;
+          <strong>stance</strong>{" "}(a value or policy preference; no truth value, we never
+          adjudicate it) and an <strong>empirical claim</strong>{" "}(a checkable factual assertion;
           it has a truth value). Treating them as one thing is the trap: publish the fused quote
           whole and we launder any false premise; rate the premise ourselves and we become the
           arbiter we promised not to be.
         </p>
         <p className="vr-doc-p">
-          <strong>Governing rule: evidence, never verdict.</strong> We never label a claim true or
+          <strong>Governing rule: evidence, never verdict.</strong>{" "}We never label a claim true or
           false, and we never attach a fact-checker&rsquo;s rating. Where a position contains a
           checkable empirical claim, we may eventually attach a neutral pointer to the primary
           data source (the relevant agency, Census, CBO, or academic review) so you can compare
@@ -158,7 +158,7 @@ export default function Methodology() {
           repaint history when it ships.
         </p>
         <p className="vr-doc-p">
-          <strong>Residual judgment, stated honestly:</strong> we can&rsquo;t reduce judgment to
+          <strong>Residual judgment, stated honestly:</strong>{" "}we can&rsquo;t reduce judgment to
           zero. Deciding what counts as &ldquo;checkable,&rdquo; which source is
           &ldquo;authoritative,&rdquo; and whether to annotate at all are themselves judgments.
           Any such rule we adopt will be rule-based, symmetric, and published here, applied to
@@ -166,7 +166,7 @@ export default function Methodology() {
           absence of judgment; it&rsquo;s judgment that is minimal, disclosed, and auditable.
         </p>
         <p className="vr-doc-p" style={{ marginBottom: 0 }}>
-          <strong>A note on participation bias:</strong> when positions come from a survey
+          <strong>A note on participation bias:</strong>{" "}when positions come from a survey
           candidates opt into, response rates skew. Vote Smart&rsquo;s own program has seen large
           partisan gaps in some races. We pull from campaign sites in addition to Vote Smart,
           which softens this, but an empty Tier 3 for a candidate is never a neutral signal about
@@ -178,7 +178,7 @@ export default function Methodology() {
       <section className="vr-doc-section">
         <h2 className="vr-doc-h2">Sources</h2>
         <p className="vr-doc-p">
-          Every <code>Position</code> and <code>IdeologyScore</code> in our data carries its own
+          Every <code>Position</code> and <code>IdeologyScore</code>{" "}in our data carries its own
           provenance: source name, source URL, and retrieval date. If a row can&rsquo;t cite
           itself, it doesn&rsquo;t render. These are the sources that policy draws on:
         </p>
@@ -270,21 +270,21 @@ export default function Methodology() {
         <h2 className="vr-doc-h2">Known limitations</h2>
         <ul className="vr-doc-list">
           <li>
-            <strong>Score vintage and lag.</strong> Academic ideology scores aren&rsquo;t computed
+            <strong>Score vintage and lag.</strong>{" "}Academic ideology scores aren&rsquo;t computed
             in real time. Every score shown carries the legislative session or vintage it was
             computed from.
           </li>
           <li>
-            <strong>Coverage gaps.</strong> Self-reported positions depend on what a campaign has
+            <strong>Coverage gaps.</strong>{" "}Self-reported positions depend on what a campaign has
             published and whether Vote Smart access pans out. An empty section means we
             don&rsquo;t have data, not that a candidate has no position.
           </li>
           <li>
-            <strong>Participation bias.</strong> Survey-based position data skews toward
+            <strong>Participation bias.</strong>{" "}Survey-based position data skews toward
             candidates who choose to respond. See above.
           </li>
           <li>
-            <strong>Freshness near election day.</strong> Ballot data (withdrawals, replacements,
+            <strong>Freshness near election day.</strong>{" "}Ballot data (withdrawals, replacements,
             late entrants) changes heavily in the final weeks of a race. We tighten our update
             cadence as elections approach and will never imply the data is final; expect a
             &ldquo;verify with your local election office before voting&rdquo; notice near
@@ -296,7 +296,7 @@ export default function Methodology() {
       <section className="vr-doc-section">
         <h2 className="vr-doc-h2">Corrections &amp; contact</h2>
         <div className="vr-doc-callout vr-doc-callout--todo">
-          <strong>TODO: not live yet.</strong> A real correction process and contact path for
+          <strong>TODO: not live yet.</strong>{" "}A real correction process and contact path for
           candidates and the public belongs here, and we&rsquo;re not willing to ship a fake one
           just to fill the section. This placeholder stays until that channel exists. If
           you&rsquo;re reading this and need to reach us, none of the data here is real yet, which
