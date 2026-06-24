@@ -52,6 +52,13 @@ export default function Methodology() {
             maintain right now.
           </li>
         </ul>
+        <p className="vr-doc-p" style={{ marginBottom: 0 }}>
+          <strong>A note on AI.</strong> AI tools were used in building this site — writing code,
+          this page included. They are not used to generate, summarize, score, or otherwise
+          determine anything about a candidate. Every candidate-facing fact, score, and quote
+          comes only from the disclosed sources above, through the disclosed methods — never from
+          a model&rsquo;s judgment.
+        </p>
       </section>
 
       <section className="vr-doc-section">
